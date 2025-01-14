@@ -1,0 +1,180 @@
+/* Estilo global */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Tipografía retro-moderna */
+    background: linear-gradient(135deg, #f0e7db, #f7d6e0); /* Fondo suave en gradiente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Título principal */
+  h2 {
+    text-align: center;
+    color: #6c5b7b; /* Color lavanda suave */
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Formulario */
+  .formulario {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .formulario:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo de los inputs */
+  .formulario input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #c06c84;
+    border-radius: 12px;
+    background-color: #f8f3f5;
+    color: #355c7d;
+    font-size: 16px;
+  }
+  
+  .formulario input:focus {
+    outline: none;
+    border-color: #6c5b7b;
+    background-color: #f1e6ee;
+    box-shadow: 0 0 5px rgba(108, 91, 123, 0.5);
+  }
+  
+  /* Botón principal */
+  .formulario button {
+    width: 100%;
+    background-color: #c06c84;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario button:hover {
+    background-color: #6c5b7b;
+  }
+  
+  /* Lista de usuarios */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  ul li:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Texto de los usuarios */
+  ul li p {
+    margin: 0;
+    color: #355c7d;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Botones secundarios */
+  ul li button {
+    background-color: #f67280;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  ul li button:hover {
+    background-color: #c06c84;
+  }
+  
+  /* Botón actualizar con estilo diferenciado */
+  ul li button.actualizar {
+    background-color: #355c7d;
+  }
+  
+  ul li button.actualizar:hover {
+    background-color: #6c5b7b;
+  }
+  
+/* Estilo de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #c06c84;
+  color: #355c7d; /* Cambia el color a un tono oscuro */
+  font-size: 16px;
+}
+
+/* Opcional: Estilo para las cabeceras de la tabla */
+table th {
+  background-color: #f8f3f5;
+  color: #355c7d; /* Mantén el color oscuro para las cabeceras */
+  text-transform: uppercase;
+}
+
+/* Opcional: Hover en las filas */
+table tr:hover {
+  background-color: #f1e6ee;
+}
+
+
+/* Estilo para la lista de empleados */
+ul {
+  list-style-type: none;
+  padding: 0;
+  color: #355c7d; /* Color oscuro para el texto */
+}
+
+ul li {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #355c7d; /* Asegura que el texto sea oscuro */
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #f1e6ee;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
