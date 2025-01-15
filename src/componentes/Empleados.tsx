@@ -33,15 +33,15 @@ const Empleados: React.FC<PropsEmpleados> = ({ departamentos, empleados, setEmpl
                     {
                         id: empleados.length + 1,
                         nombre: nombreEmpleado,
-                        idDepartamento: idDepartamentoSeleccionado, // Puede ser 0
+                        idDepartamento: idDepartamentoSeleccionado,
                     },
                 ]);
             } else {
-                // Actualizar
+                
                 setEmpleados(empleados.map(emp =>
                     emp.id === idEditar ? { ...emp, nombre: nombreEmpleado, idDepartamento: idDepartamentoSeleccionado } : emp
                 ));
-                setIdEditar(null); // Resetear el modo edición
+                setIdEditar(null); 
             }
             setNombreEmpleado("");
             setIdDepartamentoSeleccionado(0);
@@ -60,7 +60,7 @@ const Empleados: React.FC<PropsEmpleados> = ({ departamentos, empleados, setEmpl
     const editarEmpleado = (empleado: Empleado) => {
         setIdEditar(empleado.id);
         setNombreEmpleado(empleado.nombre);
-        setIdDepartamentoSeleccionado(empleado.idDepartamento); // Setear el departamento en la caja de selección
+        setIdDepartamentoSeleccionado(empleado.idDepartamento); 
     };
 
     return (

@@ -13,13 +13,13 @@ interface Empleado {
 
 interface PropsDepartamento {
   departamentos: Departamento[];
-  empleados: Empleado[]; // Para verificar si hay empleados asignados
+  empleados: Empleado[]; 
   setDepartamentos: React.Dispatch<React.SetStateAction<Departamento[]>>;
 }
 
 const Departamentos: React.FC<PropsDepartamento> = ({ departamentos, empleados, setDepartamentos }) => {
   const [nombreDepartamento, setNombreDepartamento] = useState<string>("");
-  const [idEditar, setIdEditar] = useState<number | null>(null); // Para editar el departamento
+  const [idEditar, setIdEditar] = useState<number | null>(null); 
 
   const agregarOActualizarDepartamento = () => {
     if (nombreDepartamento.trim() !== "") {
@@ -30,11 +30,11 @@ const Departamentos: React.FC<PropsDepartamento> = ({ departamentos, empleados, 
           { id: departamentos.length + 1, nombre: nombreDepartamento },
         ]);
       } else {
-        // Actualizar
+        
         setDepartamentos(departamentos.map(dep =>
           dep.id === idEditar ? { ...dep, nombre: nombreDepartamento } : dep
         ));
-        setIdEditar(null); // Resetear el modo edición
+        setIdEditar(null); 
       }
       setNombreDepartamento("");
     }
@@ -55,7 +55,7 @@ const Departamentos: React.FC<PropsDepartamento> = ({ departamentos, empleados, 
 
   const editarDepartamento = (departamento: Departamento) => {
     setIdEditar(departamento.id);
-    setNombreDepartamento(departamento.nombre); // Poner el nombre en la caja de escritura
+    setNombreDepartamento(departamento.nombre); 
   };
 
   return (

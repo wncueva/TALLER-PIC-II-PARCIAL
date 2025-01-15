@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GestionUsuarios from './componentes/GestionUsuarios'
-import Navbar from './componentes/NavBar'
+import GestionUsuarios from './componentes/GestionUsuarios';
+import Navbar from './componentes/NavBar';
 import Home from "./componentes/Home";
 import Contact from "./componentes/Contact";
 import './App.css';
@@ -24,7 +24,7 @@ const App: React.FC = () => {
   const [departamentos, setDepartamentos] = useState<Departamento[]>([]);
   const [empleados, setEmpleados] = useState<Empleado[]>([]);
 
-  //leer los datos del local storage al cargar la aplicacion
+  // Leer los datos del local storage al cargar la aplicación
   useEffect(() => {
     const storedDepartamentos = localStorage.getItem("departamentos");
     const storedEmpleados = localStorage.getItem("empleados");
@@ -40,11 +40,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     localStorage.setItem("departamentos", JSON.stringify(departamentos));
-  }, [departamentos])
+  }, [departamentos]);
 
   useEffect(() => {
     localStorage.setItem("empleados", JSON.stringify(empleados));
-  }, [empleados])
+  }, [empleados]);
 
   return (
     <Router>
@@ -54,23 +54,30 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/usuarios" element={<GestionUsuarios />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/departamentos"
-            element={<Departamentos
-              departamentos={departamentos}
-              setDepartamentos={setDepartamentos}
-            />}
+          <Route 
+            path="/departamentos" 
+            element={
+              <Departamentos
+                departamentos={departamentos}
+                setDepartamentos={setDepartamentos}
+                empleados={empleados} 
+              />
+            } 
           />
-          <Route
+          <Route 
             path="/empleados"
-            element={<Empleados
-              departamentos={departamentos}
-              empleados={empleados}
-              setEmpleados={setEmpleados} />}
+            element={
+              <Empleados
+                departamentos={departamentos}
+                empleados={empleados}
+                setEmpleados={setEmpleados}
+              />
+            }
           />
         </Routes>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
